@@ -25,10 +25,10 @@ void setup()
   lcd.print("  MorseTrainer");
   lcd.setCursor(5, 1);
   lcd.print("V1.0");
-  delay(5000);
+  delay(1500);
   lcd.clear();
-  lcd.print("Por: Jorge M.G.");
-  delay(2500);
+  lcd.print("Autor:  Jorge MG");
+  delay(1000);
   lcd.clear();
   
 }
@@ -77,22 +77,23 @@ int timeDotSelect()
   while(digitalRead(btnRST)== 1) //Hasta que no se pulse el boton, no termina el ciclo
   {
     valPot = analogRead(potTMR);
-    valPot = map(valPot, 0, 1023, 50, 250); //El tiempo de un punto oscilará entre [50, 250] milisegundos
+    valPot = map(valPot, 0, 1023, 25, 250); //El tiempo de un punto oscilará entre [50, 250] milisegundos
     lcd.print("Tiempo Dot:");
     lcd.print(valPot);
     lcd.print("ms");
-    delay(100);
+    delay(250);
     lcd.clear();
   }
   
-  lcd.print("  Seleccionado");
-    
-  delay(2000);
+  lcd.print("Seleccionado  :D");   
+  delay(1000);
+  lcd.clear();
+  lcd.print("A JUGAR!!!");
+  delay(1000);
   lcd.clear();
 
   return valPot;
 
 }
 
-//PRUEBA COMENTARIO
-//JAJAJA
+
